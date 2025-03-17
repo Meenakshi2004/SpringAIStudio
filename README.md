@@ -1,37 +1,53 @@
-# SpringAIStudio
+# WiDS Datathon 2025: ADHD & Sex Prediction from fMRI Data
 WiDS Datathon Kaggle Competition tasked with building a model to predict both an individual’s gender and their ADHD diagnosis.
 
-# This is a heading (H1)
+## **Project Overview**
 
-## This is a heading (H2)
+This project is focused on predicting **ADHD diagnosis** and **sex (female or not)** using fMRI data and socio-demographic information, as part of the **WiDS Datathon 2025**. The dataset includes brain scan data (fMRI) along with socio-demographic features to build machine learning models.
 
-### This is a heading (H3)
+## **Data Overview**
 
-## Formatting Text
+The dataset consists of:
+<ul> 
+    <li> fMRI Data: Brain scan data in matrix form. </li>
+    <li> Socio-Demographic Data: Includes features like age, gender, and parental assessments. </li>
+    <li> Target Variables: ADHD_Outcome (1 = ADHD, 0 = No ADHD) and Sex_F (1 = Female, 0 = Not Female). </li>
+</ul>
 
-This is line one
-But this is not line two
+## **Setup**
 
-This is line one  
-This is line two
+### **Clone the Repository**
 
-This is line one
+To get started, clone the repository to your local machine:
+<ul>
+    <li><code> git clone https://github.com/your-username/adhd-sex-prediction.git </code></li>
+    <li><code> cd adhd-sex-prediction </code></li>
+</ul>
 
-This is line two
+### **Install Dependencies**
 
-You can also make your text **bold** or *italicize* it 
+Install the required Python dependencies by running the following:
+<ul>
+    <li><code> pip install -r requirements.txt </code></li>
+</ul>
 
-> Add a blockquote  
-> Add multiple blockquotes
+## **Data Preprocessing**
 
-## Lists
+### **Loading Data**
 
-1. Or make a list
-2. You can either have an ordered list
-    1. And add nested items
+First, load the training and test datasets:
+```python
+import pandas as pd
 
-- Or an unordered list
-    - And of course you add nested items here too
+# Load training and test data
+train_df = pd.read_csv('train.csv')
+test_df = pd.read_csv('test.csv')
+
+# Check for missing values in the training dataset
+print(train_df.isnull().sum())
+
+
+
 
 ## Formatting Code
 ```
